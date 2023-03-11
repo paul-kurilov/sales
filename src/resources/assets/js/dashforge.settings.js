@@ -1,4 +1,5 @@
 
+
 // Append settings
 $.ajax({
   url: '../../settings.html',

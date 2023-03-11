@@ -1,31 +1,36 @@
 import {lazy, Suspense} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import Header from '../components/view/header/Header';
 import MainSpinner from '../components/UI/spinners/MainSpinner';
-  
+import Header from '../components/view/header/Header';
+import Footer from '../components/view/footer/Footer';
+import MainPage from '../components/view/pages/main/MainPage';
+
 const Page404 = lazy(() => import('../components/view/pages/system/404'));
-const MainPage = lazy(() => import('../components/view/pages/main/MainPage'));
+// const MainPage = lazy(() => import('../components/view/pages/main/MainPage'));
+const SummaryPage = lazy(() => import('../components/view/pages/summary/SummaryPage'));
+const ProjectsPage = lazy(() => import('../components/view/pages/projects/ProjectsPage'));
+
+
 
 const App = () => {
+ 
   return (
     <>
-    <Router>
-      <div className="app"> 
-      <Header/>
-          <main>
-              <Suspense fallback={<MainSpinner/>}>
-                  <Routes>
-                      <Route path="/" element={<MainPage/>}/>
-                      {/* <Route path="/comics" element={<ComicsPage/>}/>
-                      <Route path="/comics/:id" element={<SinglePage Component={SingleComicLayout} dataType='comic'/>}/>
-                      <Route path="/characters/:id" element={<SinglePage Component={SingleCharacterLayout} dataType='character'/>}/> */}
-                      <Route path="*" element={<Page404/>}/> 
-                  </Routes>
-              </Suspense>
-          </main>
-      </div>
-    </Router>
+    <BrowserRouter>  
+      <Header/> 
+      <div className='content content-fixed'> 
+        <Suspense fallback={<MainSpinner/>}>
+          <Routes>
+            <Route path="/" element={<MainPage/>}/>
+            <Route path="/summary/:type/:data" element={<SummaryPage />}/> {/*Component={SummaryPageLayout} dataType='comic' */}
+            <Route path="/projects/:type/:data" element={<ProjectsPage />}/> {/*Component={SummaryPageLayout} dataType='comic' */}
+            <Route path="*" element={<Page404/>}/> 
+          </Routes>
+        </Suspense>
+      </div>  
+      <Footer/>
+    </BrowserRouter>
     </>
   );
 }

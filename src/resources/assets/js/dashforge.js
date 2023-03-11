@@ -1,14 +1,18 @@
+import $ from 'jquery';
+import PerfectScrollbar from 'perfect-scrollbar';
 
-$(function(){
+ 
+$(function() {
   'use strict'
 
-  feather.replace();
+  
+  
 
   ////////// NAVBAR //////////
-
+  let psNavbar = '';
   // Initialize PerfectScrollbar of navbar menu for mobile only
   if(window.matchMedia('(max-width: 991px)').matches) {
-    const psNavbar = new PerfectScrollbar('#navbarMenu', {
+    psNavbar = new PerfectScrollbar('#navbarMenu', {
       suppressScrollX: true
     });
   }
@@ -26,20 +30,30 @@ $(function(){
   $(window).resize(function(){
     showNavbarActiveSub()
   })
-
+  
   // Initialize backdrop for overlay purpose
   $('body').append('<div class="backdrop"></div>');
 
-
+  
   // Showing sub menu of navbar menu while hiding other siblings
   $('.navbar-menu .with-sub .nav-link').on('click', function(e){
     e.preventDefault();
     $(this).parent().toggleClass('show');
     $(this).parent().siblings().removeClass('show');
-
     if(window.matchMedia('(max-width: 991px)').matches) {
+      // $('navbarMenu').update();
       psNavbar.update();
     }
+  })
+
+  $('.navbar-menu .with-sub .nav-sub-item').on('click', function(e){
+    $('.navbar-menu .with-sub').removeClass('show'); 
+    $('body').removeClass('navbar-nav-show');
+  })
+
+  $('.navbar-menu.nav-item.nav-link').on('click', function(e){
+    $('.navbar-menu .with-sub').removeClass('show'); 
+    $('body').removeClass('navbar-nav-show');
   })
 
   // Closing dropdown menu of navbar menu

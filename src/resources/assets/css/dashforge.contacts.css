@@ -17,7 +17,7 @@
 @media (max-width: 991.98px) {
   .app-contact.contact-content-visible .contact-content {
     visibility: visible;
-    transform: translateX(305px);
+    transform: translateX(251px);
     opacity: 1; } }
 
 @media (max-width: 1199.98px) {
@@ -37,13 +37,13 @@
 .contact-wrapper {
   background-color: #f8f9fc;
   position: fixed;
-  top: 55px;
+  top: 40px;
   bottom: 0;
   left: 0;
   right: 0; }
   @media (min-width: 992px) {
     .contact-wrapper {
-      top: 60px; } }
+      top: 40px; } }
 
 .contact-wrapper-two {
   position: relative;
@@ -109,7 +109,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 55px;
+  left: 0;
   right: 0; }
   @media (min-width: 480px) {
     .contact-sidebar {
@@ -119,27 +119,58 @@
   @media (min-width: 992px) {
     .contact-sidebar {
       width: 265px;
-      left: 60px; } }
+      left: 0; } }
   @media (min-width: 1200px) {
     .contact-sidebar {
       width: 280px; } }
 
-.contact-sidebar-header {
+.choice-workspace {
+  background-color: #f8f9fc;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 55px;
+  height: 40px;
+  border-bottom: 1px solid rgba(72, 94, 144, 0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 7px; }
+/* 
+.new-project {
+  background-color: #f8f9fc;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+  display: flex;
+  align-items: center;
+  padding: 0 7px; } */
+
+.contact-sidebar-header {
+  background-color: #f8f9fc;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 40px;
   border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   display: flex;
   align-items: center;
   padding: 0 15px; }
-  .contact-sidebar-header .feather-search {
-    color: #8392a5;
+  .contact-sidebar-header .filter {
+    color: #c2c7ce;}
+  .contact-sidebar-header .filter:hover, .contact-sidebar-header .filter:focus{
+    color: #4d5e77;}
+  .contact-sidebar-header .filter svg {
+    width: 16px;}
+  .contact-sidebar-header .feather-search, .contact-sidebar-header .fa-magnifying-glass {
+    color: #c2c7ce;
     align-self: center;
     width: 18px;
     stroke-width: 2.8px;
-    margin-right: 10px;
+    margin-right: 3px;
     margin-top: -2px; }
   .contact-sidebar-header .search-form {
     flex: 1;
@@ -149,12 +180,11 @@
       border-width: 0;
       background-color: transparent;
       font-size: inherit;
-      padding: 0;
-      color: #1b2e4b; }
+      color: #4d5e77; }
 
 .contact-sidebar-body {
   position: absolute;
-  top: 55px;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0; }
@@ -163,9 +193,9 @@
 
 .contact-list .media {
   color: #1b2e4b;
-  padding: 10px;
+  padding: 5px;
   align-items: flex-end;
-  border-radius: 0.25rem; }
+  border-radius: 0rem; }
   .contact-list .media:hover, .contact-list .media:focus {
     background-color: #f5f6fa;
     cursor: default; }
@@ -177,13 +207,26 @@
       .contact-list .media:hover nav, .contact-list .media:focus nav {
         display: flex; } }
   .contact-list .media + .media {
-    margin-top: 2px; }
+    margin-top: 1px; }
   @media (min-width: 480px) {
     .contact-list .media.active {
-      background-color: #eef0f7; }
+      /* background-color: #eef0f7;  */
+      background-color: #dddfe4; 
+      /* background-color: #6f7c98;    */
+    }
       .contact-list .media.active .avatar-online::after,
       .contact-list .media.active .avatar-offline::after {
         box-shadow: 0 0 0 2px #e5e9f2; } }
+
+.contact-list .media.active .media-body h6 {
+  /* color: #fff;  */
+  /* color: #000;  */
+}
+.contact-list .media.active .media-body span {
+  /* color: #cbd2da;  */
+  color: #5c646f; 
+}
+
 
 .contact-list .media-body span {
   color: #8392a5;
@@ -227,7 +270,7 @@
   .contact-list-divider::after {
     margin-left: 5px;
     flex: 1; }
-
+ 
 .contact-content {
   position: absolute;
   top: 0;
@@ -247,21 +290,35 @@
       transform: translateX(320px); } }
   @media (min-width: 992px) {
     .contact-content {
-      left: 325px;
+      left: 265px;
       transform: none;
       visibility: visible;
       opacity: 1; } }
   @media (min-width: 1200px) {
     .contact-content {
-      left: 340px; } }
+      left: 280px; } }
 
-.contact-content-header {
-  background-color: #fff;
+      
+.contact-content-title {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 55px;
+  height: 43px;
+  font-size: 24px;
+  font-weight: bold;
+  /* border-bottom: 1px solid rgba(72, 94, 144, 0.16); */
+  display: flex;
+  align-items: center;
+  padding: 0 25px; }
+
+.contact-content-header {
+  /* background-color: #fff; */
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  height: 37px;
   border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   display: flex;
   align-items: center;
@@ -270,40 +327,41 @@
     .contact-content-header {
       right: 290px;
       padding: 0 25px; } }
-  .contact-content-header .nav-link {
+  .contact-content-header .nav-link_ {
     color: #8392a5;
     font-size: 11px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .5px;
     padding: 0; }
-    .contact-content-header .nav-link:hover, .contact-content-header .nav-link:focus {
+    .contact-content-header .nav-link_:hover, .contact-content-header .nav-link_:focus {
       color: #525f70; }
-    .contact-content-header .nav-link.active {
+    .contact-content-header .nav-link_.active {
       color: #0168fa;
       font-weight: 600;
       position: relative; }
-      .contact-content-header .nav-link.active::before {
+      .contact-content-header .nav-link_.active::before {
         content: '';
         position: absolute;
         bottom: -19px;
         left: 0;
         width: 100%;
         border-bottom: 1px solid #0168fa; }
-    .contact-content-header .nav-link + .nav-link {
+    .contact-content-header .nav-link_ + .nav-link {
       margin-left: 30px; }
-    .contact-content-header .nav-link span {
+    .contact-content-header .nav-link_ span {
       display: none; }
       @media (min-width: 576px) {
-        .contact-content-header .nav-link span {
+        .contact-content-header .nav-link_ span {
           display: inline; } }
 
 .contact-content-body {
   position: absolute;
-  top: 55px;
+  top: 80px;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0; 
+  background-color: #fff;}
   @media (min-width: 1200px) {
     .contact-content-body {
       right: 290px; } }

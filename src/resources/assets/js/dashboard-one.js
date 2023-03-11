@@ -1,3 +1,6 @@
+import $ from 'jquery';
+
+import {df1, df2, df3, df4, df5, df6, Chart, Cookies, darkMode, lightMode} from './dashforge.sampledata.js';
 
 $(function(){
   'use strict'

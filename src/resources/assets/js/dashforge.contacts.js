@@ -1,14 +1,7 @@
-$(function(){
+import $ from 'jquery';
+import PerfectScrollbar from 'perfect-scrollbar';
 
-  'use strict'
-
-  $('[data-toggle="tooltip"]').tooltip();
-
-  // set active contact from list to show in desktop view by default
-  if(window.matchMedia('(min-width: 992px)').matches) {
-    $('.contact-list .media:first-of-type').addClass('active');
-  }
-
+const CreateScroll = () => {
 
   const contactSidebar = new PerfectScrollbar('.contact-sidebar-body', {
     suppressScrollX: true
@@ -22,9 +15,31 @@ $(function(){
     suppressScrollX: true
   });
 
-  $('.contact-navleft .nav-link').on('shown.bs.tab', function(e) {
-    contactSidebar.update()
-  })
+}
+export default CreateScroll;
+
+
+
+$(function(){
+  'use strict'
+  
+
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // set active contact from list to show in desktop view by default
+  if(window.matchMedia('(min-width: 992px)').matches) {
+    $('.contact-list .media:first-of-type').addClass('active');
+  }
+
+  
+  // CreateScroll();
+
+
+
+
+  // $('.contact-navleft .nav-link').on('shown.bs.tab', function(e) {
+  //   contactSidebar.update()
+  // })
 
   // UI INTERACTION
   $('.contact-list .media').on('click', function(e) {
