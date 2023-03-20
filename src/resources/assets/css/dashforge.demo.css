@@ -103,12 +103,12 @@
   @media (min-width: 1200px) {
     .df-example {
       padding: 25px; } }
+    
   .df-example::before {
     content: attr(data-label);
     display: block;
     position: absolute;
     top: -6px;
-    left: 5px;
     font-size: 8px;
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
@@ -117,6 +117,10 @@
     background-color: inherit;
     color: #8392a5;
     padding: 0 5px; }
+  .df-example.df-left::before {
+    left: 5px;}    
+  .df-example.df-right::before {
+    right: 5px;}  
   .df-example.df-inverse {
     background-color: #1c273c;
     color: rgba(255, 255, 255, 0.7);

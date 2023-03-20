@@ -1128,7 +1128,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.03rem; }
 
 button {
   border-radius: 0; }
@@ -2234,8 +2234,8 @@ pre {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.9375rem + 2px);
-  padding: 0.46875rem 0.625rem;
+  height: calc(1.1em + 0.9375rem + 2px);
+  padding: 0.30875rem 0.425rem;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3491,7 +3491,7 @@ input[type="button"].btn-block {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.46875rem 0.625rem;
+  padding: 0.30875rem 0.425rem;
   margin-bottom: 0;
   font-size: 0.875rem;
   font-weight: 400;
@@ -5114,13 +5114,13 @@ a.close.disabled {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 0.3rem 1rem;
   border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem; }
   .modal-header .close {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto; }
+    padding: 0.3rem 0.3rem;
+    margin: -0.3rem -0.3rem -1rem auto; }
 
 .modal-title {
   margin-bottom: 0;
@@ -5135,7 +5135,7 @@ a.close.disabled {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 0.3rem;
   border-top: 1px solid rgba(72, 94, 144, 0.16);
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
@@ -8450,7 +8450,7 @@ textarea.form-control {
   min-height: 38px; }
 
 .form-group {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .form-fieldset {
   background-color: #fff;
@@ -10345,6 +10345,10 @@ textarea.form-control {
   transform: scale(1);
   opacity: 1; }
 
+.modal button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color; }
+  
 .nav-social {
   align-items: center; }
   .nav-social .nav-link {
@@ -12163,7 +12167,13 @@ textarea.parsley-success:focus {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
+  
+.quill {
+  height: inherit!important; }
+
 .ql-container {
+  height: calc(100% - 40px)!important;
+  background-color: #fff;
   font-size: 1rem; }
 
 .ql-editor {
@@ -12327,11 +12337,11 @@ textarea.parsley-success:focus {
   background-color: #fff;
   border-color: #c0ccda;
   border-radius: 0.25rem;
-  height: 38px;
+  height: 32px;
   outline: none; }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #596882;
-    line-height: calc(1.5em + 0.9375rem + 2px)-0.1rem;
+    line-height: calc(1.1em + 0.9375rem + 2px)-0.1rem;
     padding-left: 0.625rem;
     height: 100%;
     display: flex;
@@ -12360,14 +12370,14 @@ textarea.parsley-success:focus {
   background-color: #fff;
   border-color: #c0ccda;
   border-radius: 0.25rem;
-  min-height: 38px;
+  min-height: 30px;
   outline: none; }
   .select2-container--default .select2-selection--multiple .select2-selection__rendered {
     padding: 0 4px;
     display: block; }
   .select2-container--default .select2-selection--multiple .select2-selection__choice {
     position: relative;
-    margin-top: 4px;
+    margin-top: 3px;
     margin-right: 4px;
     padding: 3px 10px 3px 20px;
     border-color: transparent;
@@ -41305,3 +41315,45 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
 
 .wd-280 {
   width: 280px; }
+
+
+.df-title {
+  font-size: 0.875rem;
+  letter-spacing: normal;
+  padding: 10px 5px;
+  background-color: #fbfcff;
+  border: 1px solid rgba(72, 94, 144, 0.16);
+  position: relative; }
+  @media (min-width: 992px) {
+    .df-title {
+      padding: 15px 7px; } }
+  @media (min-width: 1200px) {
+    .df-title {
+      padding: 20px 10px; } }
+    
+  .df-title::before {
+    content: attr(data-label);
+    display: block;
+    position: absolute;
+    top: -6px;
+    font-size: 8px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: inherit;
+    color: #8392a5;
+    padding: 0 5px; }
+  .df-title.df-title-left::before {
+    left: 5px;}    
+  .df-title.df-title-right::before {
+    right: 5px;}  
+  .df-title.df-inverse {
+    background-color: #1c273c;
+    color: rgba(255, 255, 255, 0.7);
+    border-width: 0; }
+    .df-title.df-inverse::before {
+      background-color: #3b4863;
+      top: -16px;
+      left: 0; }
+  

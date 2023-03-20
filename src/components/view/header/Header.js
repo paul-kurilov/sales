@@ -1,8 +1,13 @@
 import {Link, NavLink, useLocation} from 'react-router-dom';
 
+
+import "../../../resources/lib/select2/css/select2.min.css";
+
 import './header.scss';
 import '../../../resources/assets/css/dashforge.css';
 import '../../../resources/lib/@fortawesome/fontawesome-free/css/all.css'; 
+
+
 
 const Header = () => { 
 
