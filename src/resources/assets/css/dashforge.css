@@ -41357,3 +41357,11 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
       top: -16px;
       left: 0; }
   
+
+.react-time-picker__wrapper {
+  border: 0!important;
+}
+
+.time-picker-input {
+  padding: 0.10875rem 0.225rem!important;
+}

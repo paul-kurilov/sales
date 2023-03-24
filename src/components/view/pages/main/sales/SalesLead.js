@@ -115,7 +115,9 @@ const SalesLead = ({Component, dataType}) => {
                         <p className="font-weight-bold">Create or choose clients contact </p>
                     </div>
                     <div className="form-group col-12 col-md-6 d-flex justify-content-center">
-                        <a href="#openModal" data-toggle="modal" onClick={() => dispatch(setModal(["CreateNewContact", "modal-lg"]))} className="btn btn-primary btn-xs"> Create New Contact</a>
+                        <a href="#openModal" data-toggle="modal" 
+                            onClick={() => dispatch(setModal(["CreateNewContact", "modal-lg"]))} 
+                            className="btn btn-primary btn-xs"> Create New Contact</a>
                     </div>
                     <div className="form-group col-12 col-md-6 d-flex justify-content-center">
                         <button type="button" className="btn btn-outline-primary btn-xs"> Choose from Existing Contacts</button>

@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { useSelector } from "react-redux";
 
 import CreateNewContact from "./CreateNewContact";
-
+import AddLeadActivity from "./AddLeadActivity";
 
 
 const Modals = () => {
@@ -11,6 +11,7 @@ const Modals = () => {
   let modalBuilding;
   switch (wsModal[0]) {
     case "CreateNewContact": modalBuilding = <CreateNewContact/>; break;
+    case "AddLeadActivity": modalBuilding = <AddLeadActivity/>; break;
     default: break; 
   }
 

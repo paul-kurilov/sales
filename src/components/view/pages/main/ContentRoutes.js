@@ -7,6 +7,7 @@ import CreateTabs from "./CreateTabs";
 
 const SummaryPage = lazy(() => import('../summary/SummaryPage'));
 const SalesLead = lazy(() => import('./sales/SalesLead'));
+const SalesActivities = lazy(() => import('./sales/SalesActivities'));
 // const MainSpinner = lazy(() => import('../../../UI/spinners/MainSpinner'));
 
 
@@ -69,6 +70,7 @@ const ContentRoutes = () => {
   let contentBuilding;
   switch (wsCategory[1]) {
     case "Lead":  contentBuilding = <SalesLead/>; break;
+    case "Activities":  contentBuilding = <SalesActivities/>; break;
     case "Documents": contentBuilding = <MainSpinner/>; break;
     default: break;  
   }
