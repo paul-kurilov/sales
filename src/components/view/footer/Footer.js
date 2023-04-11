@@ -2,7 +2,9 @@
 
 import Modals from '../modal/Modals';
 
-import '../../../resources/lib/bootstrap/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+// import '../../../resources/lib/bootstrap/js/bootstrap.bundle.min.js';
 // import '../../../resources/lib/bootstrap-5.0.2/js/bootstrap';
 
 // import '../../../resources/lib/jqueryui/jquery-ui.min.js'; 
