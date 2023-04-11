@@ -41356,12 +41356,24 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
       background-color: #3b4863;
       top: -16px;
       left: 0; }
-  
+.df-title .title-btn-right {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
 
 .react-time-picker__wrapper {
   border: 0!important;
+  font-size: 12px;
 }
 
 .time-picker-input {
-  padding: 0.10875rem 0.225rem!important;
+  padding: 0.35875rem 0.125rem!important;
+}
+
+.modal-body.mmh {
+  max-height: 80vh!important;
+}
+.modal-scroll-content {
+  
 }

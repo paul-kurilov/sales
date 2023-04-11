@@ -25,7 +25,7 @@ const MainPage = () => {
                     content="MainPage information portal"
                     />
                 <title>MainPage </title>
-                <body className="app-contact"/>
+                <body className="app-contact"/> 
             </Helmet> 
         </HelmetProvider> 
 

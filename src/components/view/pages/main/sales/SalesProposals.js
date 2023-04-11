@@ -4,7 +4,7 @@ import { setModal } from "../../../../../redux/reducers/mainReducer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 import QuillEditor from "../../../../UI/quill-editor/QuillEditor";
@@ -20,7 +20,7 @@ import QuillEditor from "../../../../UI/quill-editor/QuillEditor";
 
 
 
-const SalesActivities = ({Component, dataType}) => {
+const SalesProposals = ({Component, dataType}) => {
     const dispatch = useDispatch();
 
     // const editorRef = useRef(null);
@@ -34,9 +34,9 @@ const SalesActivities = ({Component, dataType}) => {
             <Helmet>
                 <meta
                     name="description"
-                    content="SalesActivities information portal"
+                    content="SalesProposals information portal"
                     />
-                <title>SalesActivities </title>
+                <title>SalesProposals </title>
             </Helmet> 
         </HelmetProvider>  
        
@@ -45,34 +45,32 @@ const SalesActivities = ({Component, dataType}) => {
     <div className="row">
         <div className="col-12">
         
-            <div className="df-title df-title-left pt-2" data-label="Lead Activities">        
+            <div className="df-title df-title-left pt-2" data-label="Lead Proposals">        
                 <div className="row ">
                     <div className="col-12">
                         <div className="d-flex align-items-center justify-content-between mg-b-15 mg-t-0">
                             <h6 className="mg-b-0"></h6>
                             <div className="d-flex">
-                                <button href="#" className="btn btn-outline-primary btn-xs mr-2">Tamplate Actions</button>
-                                <a href="#" className="btn btn-outline-primary btn-xs d-flex align-items-center mr-2"> 
-                                    <FontAwesomeIcon icon={faFilter} size='2xs' className="pr-1"/> Filter</a>
-                                <button href="#openModal_LeadActivity" data-toggle="modal" 
-                                    onClick={() => dispatch(setModal(["LeadActivity", "modal-lg"]))} 
-                                    className="btn btn-primary btn-xs">Add a Lead Activity</button>
+                                <button href="#" className="btn btn-outline-primary btn-xs mr-2">Import Proposal</button>
+                                <button href="#openModal_Proposal" data-toggle="modal"
+                                    onClick={() => dispatch(setModal(["Proposal", "modal-xl"]))} 
+                                    className="btn btn-primary btn-xs">New Proposal</button>
                             </div>
                         </div> 
 
                         <div className="d-flex justify-content-center mt-5">
-                            <FontAwesomeIcon icon={faPhone} size='4x'/>
+                            <FontAwesomeIcon icon={faFileAlt} size='4x'/>
                         </div>
                         <div className="d-flex justify-content-center mt-3">
-                            <h3>Create activities with your leads</h3>
+                            <h3>Create a Lead Proposal</h3>
                         </div>
                         <div className="d-flex justify-content-center mb-3 ">
-                            <span>Track all events with your clients</span>
+                            <span>Create and track all lead interactions</span>
                         </div>
                         <div className="d-flex justify-content-center mb-3">
-                            <button href="#openModal_LeadActivity" data-toggle="modal" 
-                                    onClick={() => dispatch(setModal(["LeadActivity", "modal-lg"]))} 
-                                    className="btn btn-primary btn-xs">Add a Lead Activity</button>
+                            <button href="#openModal_Proposal" data-toggle="modal" 
+                                    onClick={() => dispatch(setModal(["Proposal", "modal-xl"]))} 
+                                    className="btn btn-primary btn-xs">Create Proposal</button>
                         </div>
 
                         
@@ -221,4 +219,4 @@ const SalesActivities = ({Component, dataType}) => {
     )
 }
 
-export default SalesActivities;
+export default SalesProposals;

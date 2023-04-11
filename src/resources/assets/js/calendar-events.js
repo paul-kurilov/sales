@@ -1,6 +1,9 @@
 // sample calendar events data
-
 'use strict'
+
+import { moment } from '../../lib/moment/min/moment.min.js'
+
+
 
 var curYear = moment().format('YYYY');
 var curMonth = moment().format('MM');

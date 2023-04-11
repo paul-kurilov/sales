@@ -1,16 +1,16 @@
 
 
-const CreateNewContact = () => {
+const CreateNewContact = (props) => {
 
   return(
     <div className="modal-content tx-14">
       <div className="modal-header">
           <h5 className="modal-title font-weight-bold">Customer Contact</h5>
-          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={props.close}>
             <span aria-hidden="true">&times;</span>
           </button>
       </div>
-      <div className="modal-body">
+      <div className="modal-body mb-scroll mmh">
 
 
           <form>

@@ -1,0 +1,38 @@
+// глобальные переменные
+@import "variables.scss";
+
+
+
+
+
+.tmpRQ {
+  background: black!important;
+  width: 300px / 960px * 100%;
+  >p { 
+    @extend %brend-item;
+    color: white!important
+  }
+  b { 
+    @extend %brend-item;
+    color: $brend-color;
+    font-family: $brend-font;
+    &.add {
+      @include fontz(30px, green)
+    }
+  }
+  a {
+    color: $brend-color;
+    &:hover {
+      @include fontz(20px, yellow)
+    }
+    &:before {
+      color: red;
+    }
+    &:after {
+      color: darkblue;
+    }
+  }
+
+}
+
+

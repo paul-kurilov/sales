@@ -8,8 +8,12 @@ import CreateTabs from "./CreateTabs";
 const SummaryPage = lazy(() => import('../summary/SummaryPage'));
 const SalesLead = lazy(() => import('./sales/SalesLead'));
 const SalesActivities = lazy(() => import('./sales/SalesActivities'));
-// const MainSpinner = lazy(() => import('../../../UI/spinners/MainSpinner'));
+const SalesProposals = lazy(() => import('./sales/SalesProposals'));
+const FilesDocuments = lazy(() => import('./files/FilesDocuments'));
+const TimeSchedule = lazy(() => import('./time/TimeSchedule'));
+const TimeDailyLogs = lazy(() => import('./time/TimeDailyLogs'));
 
+const JobsJob = lazy(() => import('./jobs/JobsJob'));
 
 const TabRoutes = () => {
   const dispatch = useDispatch();
@@ -71,7 +75,19 @@ const ContentRoutes = () => {
   switch (wsCategory[1]) {
     case "Lead":  contentBuilding = <SalesLead/>; break;
     case "Activities":  contentBuilding = <SalesActivities/>; break;
-    case "Documents": contentBuilding = <MainSpinner/>; break;
+    case "Proposals":  contentBuilding = <SalesProposals/>; break;
+
+    case "Documents": contentBuilding = <FilesDocuments/>; break;
+    case "Photos": contentBuilding = <FilesDocuments/>; break;
+    case "Videos": contentBuilding = <FilesDocuments/>; break;
+
+    case "Schedule": contentBuilding = <TimeSchedule/>; break;
+    case "Time Clock": contentBuilding = <MainSpinner/>; break;
+    case "Daily Logs": contentBuilding = <TimeDailyLogs/>; break;
+
+    
+    case "Job":  contentBuilding = <JobsJob/>; break;
+
     default: break;  
   }
   

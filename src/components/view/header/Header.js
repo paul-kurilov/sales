@@ -7,8 +7,15 @@ import "../../../../node_modules/react-time-picker/dist/TimePicker.css"
 import "../../../resources/lib/select2/css/select2.min.css";
 
 import './header.scss';
-import '../../../resources/assets/css/dashforge.css';
+
 import '../../../resources/lib/@fortawesome/fontawesome-free/css/all.css'; 
+import '../../../resources/lib/ionicons/css/ionicons.min.css'; 
+
+
+import '../../../resources/assets/css/dashforge.css';
+// import '../../../resources/assets/css/dashforge.contacts.css';
+import '../../../resources/assets/css/dashforge.filemgr.css';
+
 
 
 

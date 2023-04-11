@@ -1,0 +1,15 @@
+$brend-color: #ff5100;
+$brend-font: 'lato';
+// $brend-bg: rgba(167, 31, 31, 0.5);
+$brend-bg: rgba(#f0f, 0.5);
+%brend-item {
+  font-size: 20px;
+  padding: 100px;
+  background-color: $brend-bg;
+}
+
+
+@mixin fontz($f, $c) {
+  font-size: $f;
+  color: $c;
+}

@@ -15,6 +15,7 @@ const CreateScroll = () => {
     suppressScrollX: true
   });
 
+
 }
 export default CreateScroll;
 

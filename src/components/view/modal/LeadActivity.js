@@ -6,12 +6,12 @@ import TimePicker from "react-time-picker";
 // import "jquery-ui/themes/base/datepicker.css";
 // import "jquery-ui/ui/widgets/datepicker";
 
-const AddLeadActivity = () => {
+const LeadActivity = (props) => {
     const [startDate, setStartDate] = useState(null);
     const [startTime, setStartTime] = useState("10:00");
     const [endTime, setEndTime] = useState("5:00");
     // const inputRef = useRef(null);
-
+    
     // useEffect(() => {
     //     $(inputRef.current).datepicker({
     //     //   dateFormat: "mm/dd/yy",
@@ -23,11 +23,11 @@ const AddLeadActivity = () => {
     <div className="modal-content tx-14">
       <div className="modal-header">
           <h5 className="modal-title font-weight-bold">Lead Activity</h5>
-          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={props.close}>
             <span aria-hidden="true">&times;</span>
           </button>
       </div>
-      <div className="modal-body">
+      <div className="modal-body mb-scroll mmh" >
 
 
           <form>
@@ -72,7 +72,7 @@ const AddLeadActivity = () => {
                                 onChange={setStartTime}
                                 value={startTime}
                                 className="form-control time-picker-input"
-                                disableClock={false}
+                                disableClock={true}
                                 clearIcon={null}/>
                         </div>
                         <div className="form-group col-4">
@@ -81,7 +81,7 @@ const AddLeadActivity = () => {
                                 onChange={setEndTime}
                                 value={endTime}
                                 className="form-control time-picker-input"
-                                disableClock={false}
+                                disableClock={true}
                                 clearIcon={null}/>
                         </div>
                     </div>
@@ -122,6 +122,55 @@ const AddLeadActivity = () => {
                 
               </div>
             </div>
+
+            <div className="df-title df-title-left mt-3" data-label="Location">
+            <button className="btn btn-secondary btn-xs m-0 py-0 title-btn-right">Copy Address From</button>
+              <div className="row">
+                {/* <div className="col-12 d-flex justify-content-center">
+                    <button className="btn btn-outline-secondary btn-xs m-0 py-0 ">Copy Address From</button>
+                </div> */}
+                <div className="col-12">
+                    
+                    <div className="form-row">
+                        <div className="form-group col-7 col-lg-4 order-1">
+                            <label className="small font-weight-bold">Street Address</label>
+                            <input type="text" className="form-control" placeholder=""/>
+                            {/* <div className="input-group mg-b-10">
+                                <div className="input-group-prepend">
+                                    <button type="button" className="input-group-text btn btn-primary btn-xs"><i className="fa fa-paste"></i></button>
+                                </div>
+                                <input type="text" className="form-control" placeholder=""/>
+                            </div>  */}
+                        </div>
+                        <div className="form-group col-7 col-lg-3 order-3 order-lg-2">
+                            <label className="small font-weight-bold">City</label>
+                            <input type="text" className="form-control" placeholder=""/>
+                        </div>
+                        <div className="form-group col-5 col-lg-3 order-2 order-lg-3">
+                            <label className="small font-weight-bold">State</label>
+                            <input type="text" className="form-control" placeholder=""/>
+                        </div>
+                        <div className="form-group col-5 col-lg-2 order-4">
+                            <label className="small font-weight-bold">Zip Code</label>
+                            <input type="text" className="form-control" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+              </div>  
+            </div>
+
+            <div className="df-title df-title-left mt-3" data-label="Details">
+              <div className="row">
+                <div className="col-12">
+                    <div className="form-group">
+                        <label className="small font-weight-bold">Description</label>
+                        <textarea type="text" className="form-control" rows="3"  placeholder=""/>
+                    </div>
+                </div>
+              </div>
+            </div>    
+
+
           </form>  
         
       </div>
@@ -133,4 +182,4 @@ const AddLeadActivity = () => {
   )
 }
 
-export default AddLeadActivity;
+export default LeadActivity;

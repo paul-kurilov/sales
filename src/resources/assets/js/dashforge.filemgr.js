@@ -1,3 +1,7 @@
+import $ from 'jquery';
+import PerfectScrollbar from 'perfect-scrollbar';
+import feather from 'feather-icons';
+
 $(function(){
   'use strict'
 
