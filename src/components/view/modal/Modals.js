@@ -63,7 +63,7 @@ const Modals = () => {
 
  
   useEffect(() => {
-    const elements = document.querySelectorAll('.modal-body.mb-scroll, .modal-scroll-content'); // .modal-body.mb-scroll, .modal-scroll-content
+    const elements = document.querySelectorAll('.modal-body.mb-scroll'); // .modal-body.mb-scroll, .modal-scroll-content
     elements.forEach(element => {
       new PerfectScrollbar(element, {
         suppressScrollX: true

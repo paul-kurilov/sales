@@ -12,7 +12,7 @@ import '../../../resources/lib/bootstrap/js/bootstrap.bundle.min.js';
  
 import '../../../resources/assets/js/dashforge.js';
 import '../../../resources/assets/js/dashforge.contacts.js';
-import '../../../resources/assets/js/dashforge.filemgr';
+// import '../../../resources/assets/js/dashforge.filemgr';
 
 
 
