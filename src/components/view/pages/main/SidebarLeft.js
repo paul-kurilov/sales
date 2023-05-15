@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setType } from "../../../../redux/reducers/mainReducer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +9,29 @@ const SidebarLeft = () => {
     const wsType = useSelector((state) => state.workspace.type);
     const dispatch = useDispatch();
     const newLeadJob = wsType === "sales" ? "NEW LEAD" : "NEW JOB";
+
+    useEffect(() => {
+        const contactList = document.querySelectorAll('.contact-list .media');
+        contactList.forEach(function(contact) {
+    
+            contact.addEventListener('click', function(e) { 
+              e.preventDefault();
+        
+              contactList.forEach(function(item) {
+                item.classList.remove('active');
+              });
+              contact.classList.add('active');
+          
+              if (window.matchMedia('(max-width: 991px)').matches) {
+                document.body.classList.add('contact-content-show');
+                document.body.classList.remove('contact-content-visible');
+        
+                document.getElementById('mainMenuOpen').classList.add('d-none');
+                document.getElementById('contactContentHide').classList.remove('d-none');
+              }
+            });
+          });
+    }, [])
 
     return(
         <div className="contact-sidebar">
